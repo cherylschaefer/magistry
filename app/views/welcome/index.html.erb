@@ -3,13 +3,13 @@
 <br/>
 <%= semantic_form_for @intake_form do |f| %>
   <label>Do you feel like you're in danger?</label>
-  <%= f.input :immediate_danger, as: :radio, collection: ["Yes!", "No"] %>
+  <%= f.input :immediate_danger, label: false, as: :radio, collection: ["Yes!", "No"] %>
 
-  <div class="hidden">
-    <div id="name-question">
+    <div class="later-questions" id="name-question">
       <%= f.input :name, label: "What can I call you?" %>
     </div>
-  </div>
+    <div class="later-questions" id="">
+    </div>
 
   <%= f.submit "Show My Results", class: "btn btn-primary" %>
 <% end %>
