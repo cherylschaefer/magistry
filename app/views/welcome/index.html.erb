@@ -1,15 +1,22 @@
-<h1>Magistry</h1>
-<h2>Magis + Tapestry: Your Robotic Help</h2>
-<br/>
-<%= semantic_form_for @intake_form do |f| %>
-  <label>Do you feel like you're in danger?</label>
-  <%= f.input :immediate_danger, label: false, as: :radio, collection: ["Yes!", "No"] %>
-
-    <div class="later-questions" id="name-question">
-      <%= f.input :name, label: "What can I call you?" %>
-    </div>
-    <div class="later-questions" id="">
+<div class="container">
+  <h1>Magistry</h1>
+  <h2>Magis + Tapestry: Your Robotic Help</h2>
+  <br/>
+  <%= semantic_form_for @intake_form do |f| %>
+    <div id="danger-question">
+      <label>Do you feel like you're in danger?</label>
+      <%= f.input :immediate_danger, label: false, as: :radio, collection: ["Yes!", "No"] %>
     </div>
 
-  <%= f.submit "Show My Results", class: "btn btn-primary" %>
-<% end %>
+      <div class="later-questions" id="name-question">
+        <%= f.input :name, label: "What can I call you?" %>
+      </div>
+      <div class="later-questions" id="gender-question">
+        <%# add name if there is time %>
+        <p>GREAT TO MEET YOU. WE'D LIKE TO LEARN A LITTLE MORE ABOUT YOU SO WE CAN FIND THE BEST SERVICES FOR YOU. LET'S GET STARTED.</p>
+        <%= f.input :gender, label: "Do you identify as", as: :select, collection: ["Male", "Female", "Other", "Prefer Not To Answer"] %>
+      </div>
+
+    <%= f.submit "Show My Results", class: "btn btn-primary" %>
+  <% end %>
+</div>

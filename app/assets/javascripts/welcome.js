@@ -9,13 +9,21 @@ $(document).ready( function () {
     }
     if (value == "No") {
       $("#name-question").show();
+      $("#danger-question").hide();
     }
   });
 
   $('input[name="intake_form[name]"]').change(function() {
     var value = $(this).val();
     if (value.length > 0) {
-      alert("value is there");
+      $("#gender-question").show();
+      $("#name-question").hide();
+    }
+  });
+
+  $('input[name="intake_form[gender]"]').change(function() {
+    var value = $(this).val();
+    if (value.length > 0) {
     }
   });
 
