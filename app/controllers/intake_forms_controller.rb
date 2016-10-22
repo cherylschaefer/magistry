@@ -13,6 +13,6 @@ class IntakeFormsController < ApplicationController
 
   private
   def intake_form_params
-    params.require(:intake_form).permit(:immediate_danger, :name)
+    params.require(:intake_form).permit(:immediate_danger, :name, :gender, :age_range, :location, :place_to_sleep, :needs_medical_attention)
   end
 end
