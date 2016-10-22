@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   def index
+    @intake_form = IntakeForm.new
   end
 
   def scott

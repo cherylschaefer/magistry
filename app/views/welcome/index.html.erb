@@ -1,4 +1,9 @@
 <h1>Magistry</h1>
-<h2>Magis + Tapestry</h2>
-
-<p>The time is now: <%= Time.now %></p>
+<h2>Magis + Tapestry: Your Robotic Help</h2>
+<br/>
+<%= semantic_form_for @intake_form do |f| %>
+  <label>Do you feel like you're in danger?</label>
+  <%= f.input :immediate_danger, as: :radio, collection: ["Yes!", "No"] %>
+  <%= f.input :name, label: "What can I call you?" %>
+  <%= f.submit "Show My Results", class: "btn btn-primary" %>
+<% end %>
