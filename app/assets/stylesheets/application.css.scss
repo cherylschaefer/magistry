@@ -47,7 +47,11 @@ body, p {font-family: 'Open Sans', sans-serif;}
     border: 0px solid;
 }
 
-.bg-warning, .bg-info, bg-danger {
+.bg-danger {
+    link-color: #000000;
+}
+
+.bg-warning, .bg-info, .bg-danger {
     padding: 20px;
 }
 
@@ -63,8 +67,8 @@ body, p {font-family: 'Open Sans', sans-serif;}
     background-color: #e6493d;
 }
 
-match-row4, match-row3, match-row2, match-row1 {
-   min-height: 800px; 
+.match-row4, match-row3, match-row2, match-row1 {
+   matchHeight(false); 
 }
 
 @media only screen and (min-width : 768px) {
@@ -72,7 +76,7 @@ match-row4, match-row3, match-row2, match-row1 {
         display: table;
     }
 
-.is-table-row [class*="col-"] {
+.table-row [class*="col-"] {
         float: none;
         display: table-cell;
         vertical-align: top;
