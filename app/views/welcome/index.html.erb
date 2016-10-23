@@ -20,9 +20,6 @@
         <div class="later-questions" id="age-question">
           <%= f.input :age_range, label: "How old are you?", as: :select, collection: ["0-6 years old", "7-12 years old", "13-17 years old", "18+ years old"] %>
         </div>
-        <div class="later-questions" id="children-question">
-          <%= f.input :children, label: "How many children under the age of 18 do you have living with you?", in: 0..15, step: 1 %>
-        </div>
         <div class="later-questions" id="location-question">
           <%= f.input :location, label: "Where are you right now?", as: :select, collection: ["St. Louis Metropolitan Area"] %>
         </div>
@@ -40,6 +37,10 @@
         </div>
         <div class="later-questions" id="medical-attention-question">
           <%= f.input :needs_medical_attention, label: "Do you need medical or psychological help?", as: :select, collection: ["Yes, I have a medical emergency", "Yes, I need medical care but it is not an emergency", "No, I do not need medical care"] %>
+        </div>
+        <div class="later-questions" id="children-question">
+          <p>This is the last question! Show Results Below</p>
+          <%= f.input :children, label: "How many children under the age of 18 do you have living with you?", in: 0..15, step: 1 %>
         </div>
       </div>
 
