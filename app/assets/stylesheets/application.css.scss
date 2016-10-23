@@ -23,6 +23,8 @@
   color: #000;
 }
 
+@media (min-width: 768px) { body { padding-top: 80px; padding-bottom: 20px;} } 
+@media (max-width: 767px) { body { padding-top: 120px; padding-bottom: 20px;} } 
 
 h1 {font-family: 'Signika', sans-serif;}
 
@@ -32,7 +34,4 @@ h3 {font-family: 'Signika', sans-serif;}
 
 body, p {font-family: 'Open Sans', sans-serif;}
 
-.btn {
-    margin: 0;
-    padding: 20;
-}
+.header img {padding:10px;}
