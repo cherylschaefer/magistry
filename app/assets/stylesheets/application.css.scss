@@ -21,6 +21,7 @@
 
 .label {
   color: #000;
+  font-size: 1em;
 }
 
 h1 {font-family: 'Signika', sans-serif;}
@@ -93,4 +94,8 @@ match-row4, match-row3, match-row2, match-row1 {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
+}
+
+.later-questions {
+  list-style: none;
 }
