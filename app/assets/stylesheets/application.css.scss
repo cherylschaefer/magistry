@@ -47,6 +47,30 @@ body, p {font-family: 'Open Sans', sans-serif;}
     border: 0px solid;
 }
 
-.bg-warning, .bg-info {
+.bg-warning, .bg-info, bg-danger {
     padding: 20px;
+}
+
+.bg-warning {
+    background-color:#face55;
+}
+
+.bg-info {
+    background-color: #8acfbc;
+}
+
+.bg-danger {
+    background-color: #e6493d;
+}
+
+@media only screen and (min-width : 768px) {
+    .is-table-row {
+        display: table;
+    }
+
+.is-table-row [class*="col-"] {
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+    }
 }
