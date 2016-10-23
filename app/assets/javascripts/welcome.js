@@ -32,8 +32,16 @@ $(document).ready( function () {
   $("#intake_form_age_range").change(function() {
     var value = $(this).val();
     if (value.length > 0) {
-      $("#location-question").show();
+      $("#children-question").show();
       $("#age-question").hide();
+    }
+  });
+
+  $("#intake_form_age_range").change(function() {
+    var value = $(this).val();
+    if (value.length > 0) {
+      $("#location-question").show();
+      $("#children-question").hide();
     }
   });
 
@@ -42,6 +50,30 @@ $(document).ready( function () {
     if (value.length > 0) {
       $("#place-to-sleep-question").show();
       $("#location-question").hide();
+    }
+  });
+
+  $('input[name="intake_form[lgbtq]"]').click(function() {
+    var value = $(this).val();
+    if (value.length > 0) {
+      $("#hiv-question").show();
+      $("#lgbtq-question").hide();
+    }
+  });
+
+  $('input[name="intake_form[hiv]"]').click(function() {
+    var value = $(this).val();
+    if (value.length > 0) {
+      $("#abuse-victim-question").show();
+      $("#hiv-question").hide();
+    }
+  });
+
+  $('input[name="intake_form[abuse_victim]"]').click(function() {
+    var value = $(this).val();
+    if (value.length > 0) {
+      $("#place-to-sleep-question").show();
+      $("#abuse-victim-question").hide();
     }
   });
 
