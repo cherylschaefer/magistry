@@ -17,7 +17,21 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "formtastic";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Signika');
 
 .label {
   color: #000;
 }
+
+@media (min-width: 768px) { body { padding-top: 80px; padding-bottom: 20px;} } 
+@media (max-width: 767px) { body { padding-top: 120px; padding-bottom: 20px;} } 
+
+h1 {font-family: 'Signika', sans-serif;}
+
+h2 {font-family: 'Signika', sans-serif;}
+
+h3 {font-family: 'Signika', sans-serif;}
+
+body, p {font-family: 'Open Sans', sans-serif;}
+
+.header img {padding:15px;}
