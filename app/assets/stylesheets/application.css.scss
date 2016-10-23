@@ -73,10 +73,6 @@ body, p {font-family: 'Open Sans', sans-serif;}
     background-color: #e6493d;
 }
 
-.match-row4, match-row3, match-row2, match-row1 {
-   matchHeight(false); 
-}
-
 @media only screen and (min-width : 768px) {
     .is-table-row {
         display: table;
