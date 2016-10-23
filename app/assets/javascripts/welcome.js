@@ -21,17 +21,15 @@ $(document).ready( function () {
     }
   });
 
-  $('input[name="intake_form[gender]"]').change(function() {
-    alert("got a gender change");
+  $("#intake_form_gender").change(function() {
     var value = $(this).find('option:selected').val();
-    alert(value);
-    if (value == "Female") {
+    if (value.length > 0) {
       $("#age-question").show();
       $("#gender-question").hide();
     }
   });
 
-  $('input[name="intake_form[age]"]').change(function() {
+  $("#intake_form_age_range").change(function() {
     var value = $(this).val();
     if (value.length > 0) {
       $("#location-question").show();
@@ -39,7 +37,7 @@ $(document).ready( function () {
     }
   });
 
-  $('input[name="intake_form[location]"]').change(function() {
+  $("#intake_form_location").change(function() {
     var value = $(this).val();
     if (value.length > 0) {
       $("#place-to-sleep-question").show();
@@ -47,10 +45,19 @@ $(document).ready( function () {
     }
   });
 
-  $('input[name="intake_form[medical-attention]"]').change(function() {
+  $('input[name="intake_form[place_to_sleep]"]').click(function() {
+    var value = $(this).val();
+    if (value.length > 0) {
+      $("#medical-attention-question").show();
+      $("#place-to-sleep-question").hide();
+    }
+  });
+
+  $("#intake_form_needs_medical_attention").change(function() {
     var value = $(this).val();
     if (value.length > 0) {
       $("#medical-attention-question").hide();
+      $("#intake-form-submit-button").click();
     }
   });
 
