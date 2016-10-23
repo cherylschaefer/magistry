@@ -66,3 +66,27 @@ body, p {font-family: 'Open Sans', sans-serif;}
 match-row4, match-row3, match-row2, match-row1 {
    min-height: 800px; 
 }
+
+@media only screen and (min-width : 768px) {
+    .is-table-row {
+        display: table;
+    }
+
+.is-table-row [class*="col-"] {
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+    }
+}
+
+/**
+ * Extra large button extensions. Extends `.btn`.
+ */
+#intake-form-submit-button {
+  padding: 18px 28px;
+  font-size: 22px;
+  line-height: normal;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}

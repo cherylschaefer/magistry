@@ -1,4 +1,4 @@
-$(document).ready( function () {
+$(document).on('turbolinks:load', function () {
 
   $(".later-questions").hide();
 
@@ -32,23 +32,15 @@ $(document).ready( function () {
   $("#intake_form_age_range").change(function() {
     var value = $(this).val();
     if (value.length > 0) {
-      $("#children-question").show();
-      $("#age-question").hide();
-    }
-  });
-
-  $("#intake_form_age_range").change(function() {
-    var value = $(this).val();
-    if (value.length > 0) {
       $("#location-question").show();
-      $("#children-question").hide();
+      $("#age-question").hide();
     }
   });
 
   $("#intake_form_location").change(function() {
     var value = $(this).val();
     if (value.length > 0) {
-      $("#place-to-sleep-question").show();
+      $("#lgbtq-question").show();
       $("#location-question").hide();
     }
   });
@@ -88,8 +80,8 @@ $(document).ready( function () {
   $("#intake_form_needs_medical_attention").change(function() {
     var value = $(this).val();
     if (value.length > 0) {
+      $("#children-question").show();
       $("#medical-attention-question").hide();
-      $("#intake-form-submit-button").click();
     }
   });
 });
