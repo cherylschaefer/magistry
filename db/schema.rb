@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161022190102) do
+ActiveRecord::Schema.define(version: 20161022232835) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20161022190102) do
     t.string  "age_range"
     t.string  "location"
     t.boolean "place_to_sleep"
-    t.boolean "medical_attention"
+    t.string  "needs_medical_attention"
   end
 
 end
