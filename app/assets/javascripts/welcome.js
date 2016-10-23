@@ -92,5 +92,4 @@ $(document).ready( function () {
       $("#intake-form-submit-button").click();
     }
   });
-
 });
