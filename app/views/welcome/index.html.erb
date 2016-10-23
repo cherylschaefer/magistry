@@ -24,13 +24,13 @@
           <%= f.input :location, label: "Where are you right now?", as: :select, collection: ["St. Louis Metropolitan Area"] %>
         </div>
         <div class="later-questions" id="place-to-sleep-question">
-          <%= f.input :place_to_sleep, label: "Do you have a place to sleep tonight?" %>
+          <%= f.input :place_to_sleep, label: "Do you have a place to sleep tonight?", as: :radio, collection: ["Yes", "No"] %>
         </div>
         <div class="later-questions" id="medical-attention-question">
           <%= f.input :needs_medical_attention, label: "Do you need medical or psychological help?", as: :select, collection: ["Yes, I have a medical emergency", "Yes, I need medical care but it is not an emergency", "No, I do not need medical care"] %>
         </div>
       </div>
 
-    <%= f.submit "Show My Results", class: "btn btn-primary" %>
+    <%= f.submit "Show My Results", class: "btn btn-primary", id: "intake-form-submit-button" %>
   <% end %>
 </div>
